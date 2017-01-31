@@ -8,7 +8,6 @@ function getAllMovies(callback) {
 
 function searchByTitle(searchString, callback){
   var query = 'SELECT title FROM movies WHERE instr(title, ?) > 0;';
-  console.log(query);
   db.all(query, searchString, callback);
 }
 
